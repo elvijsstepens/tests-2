@@ -24,9 +24,17 @@
     text-align: center;
   }
   
-  section {
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
     padding: 20px;
     text-align: center;
+  }
+
+  .main-content img {
+    max-width: 100%;
+    height: auto;
   }
   
   aside {
@@ -56,6 +64,18 @@
       display: block;
     }
   }
+
+  @media (min-width: 992px) {
+    .main-content {
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+
+    .main-content img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 </style>
 </head>
 <body>
@@ -68,21 +88,22 @@
   <h2>Navigation</h2>
 </nav>
 
-<section>
-  <h2>Main Content</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum vehicula diam, a efficitur purus maximus eget.</p>
-  <img src="stepan-cover.jpg" alt="Cat Picture">
-</section>
+<div class="main-content">
+  <section>
+    <h2>Main Content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum vehicula diam, a efficitur purus maximus eget.</p>
+    <img src="stepan-cover.jpg" alt="Cat Picture">
+  </section>
 
-<aside>
-  <h2>Follow Степан @loveyoustepan</h2>
-  <div class="ad">
-    <a href="https://www.instagram.com/loveyoustepan" target="_blank">
-      <img src="stepan.PNG" alt="Ad">
-    </a>
-  </div>
-</aside>
-
+  <aside>
+    <h2>Follow Степан @loveyoustepan</h2>
+    <div class="ad">
+      <a href="https://www.instagram.com/loveyoustepan" target="_blank">
+        <img src="stepan.PNG" alt="Ad">
+      </a>
+    </div>
+  </aside>
+</div>
 
 <footer>
   <h2>Footer</h2>
