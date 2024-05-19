@@ -12,6 +12,7 @@
   }
   
   header {
+    grid-area: header;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -19,12 +20,14 @@
   }
   
   nav {
+    grid-area: nav;
     background-color: #f4f4f4;
     padding: 20px;
     text-align: center;
   }
   
   .main-content {
+    grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -38,12 +41,14 @@
   }
   
   aside {
+    grid-area: sidebar;
     background-color: #f4f4f4;
     padding: 20px;
     text-align: center;
   }
   
   footer {
+    grid-area: footer;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -51,7 +56,7 @@
   }
 
   .ad {
-    display: none;
+    display: block;
   }
 
   .ad img {
@@ -59,9 +64,18 @@
     height: auto;
   }
 
+  .ad:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
   @media (min-width: 576px) {
-    .ad {
-      display: block;
+    .container {
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "main sidebar"
+        "footer footer";
     }
   }
 
@@ -75,49 +89,63 @@
       max-width: 100%;
       height: auto;
     }
+
+    .ad:nth-child(2) {
+      display: none;
+    }
   }
 
-  /* Hover effect */
-  .hover-effect {
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
-
-  .hover-effect:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+  /* Grid Layout */
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+    grid-gap: 20px;
+    padding: 20px;
   }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Header</h1>
-</header>
+<div class="container">
+  <header>
+    <h1>Header</h1>
+  </header>
 
-<nav>
-  <h2>Navigation</h2>
-</nav>
+  <nav>
+    <h2>Navigation</h2>
+  </nav>
 
-<div class="main-content">
-  <section class="hover-effect">
-    <h2>Main Content</h2>
-    <p>Stepan (Ukrainian: Степан) is a Ukrainian striped cat who gained worldwide popularity on social media for his calm nature and jaded posture, making him Ukraine's most popular cat. He has more than one and a half million followers on Twitter and Instagram. Since 2019, Stepan also has an account on the TikTok network. By August 2023 Stepan had 1.3m followers on Instagram. In 2022 Stepan's Instagram page helped raise almost 15,000 euros in humanitarian aid for Ukraine.</p>
-    <img src="stepan-cover.jpg" alt="Cat Picture">
-  </section>
+  <div class="main-content">
+    <section>
+      <h2>Main Content</h2>
+      <p>Stepan (Ukrainian: Степан) is a Ukrainian striped cat who gained worldwide popularity on social media for his calm nature and jaded posture, making him Ukraine's most popular cat. He has more than one and a half million followers on Twitter and Instagram. Since 2019, Stepan also has an account on the TikTok network. By August 2023 Stepan had 1.3m followers on Instagram. In 2022 Stepan's Instagram page helped raise almost 15,000 euros in humanitarian aid for Ukraine.</p>
+      <img src="stepan-cover.jpg" alt="Cat Picture">
+    </section>
 
-  <aside>
-    <h2>Follow Степан @loveyoustepan</h2>
-    <div class="ad">
-      <a href="https://www.instagram.com/loveyoustepan" target="_blank">
-        <img src="stepan.PNG" alt="Ad">
-      </a>
-    </div>
-  </aside>
+    <aside>
+      <h2>Follow Степан @loveyoustepan</h2>
+      <div class="ad">
+        <a href="https://www.instagram.com/loveyoustepan" target="_blank">
+          <img src="stepan.PNG" alt="Ad">
+        </a>
+      </div>
+      <div class="ad">
+        <a href="https://www.instagram.com/loveyoustepan" target="_blank">
+          <img src="stepan.PNG" alt="Ad">
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <h2>Footer</h2>
+  </footer>
 </div>
-
-<footer>
-  <h2>Footer</h2>
-</footer>
 
 </body>
 </html>
