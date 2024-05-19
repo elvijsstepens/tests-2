@@ -29,7 +29,7 @@
     grid-template-columns: 1fr;
     grid-gap: 20px;
     padding: 20px;
-    text-align: justify; /* Justify text */
+    text-align: justify;
   }
 
   .main-content img {
@@ -76,6 +76,16 @@
       height: auto;
     }
   }
+
+  /* Hover effect */
+  .hover-effect {
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .hover-effect:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
 </style>
 </head>
 <body>
@@ -89,7 +99,7 @@
 </nav>
 
 <div class="main-content">
-  <section>
+  <section class="hover-effect">
     <h2>Main Content</h2>
     <p>Stepan (Ukrainian: Степан) is a Ukrainian striped cat who gained worldwide popularity on social media for his calm nature and jaded posture, making him Ukraine's most popular cat. He has more than one and a half million followers on Twitter and Instagram. Since 2019, Stepan also has an account on the TikTok network. By August 2023 Stepan had 1.3m followers on Instagram. In 2022 Stepan's Instagram page helped raise almost 15,000 euros in humanitarian aid for Ukraine.</p>
     <img src="stepan-cover.jpg" alt="Cat Picture">
