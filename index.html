@@ -1,25 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 2  Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .ad {
+    display: none;
+  }
+
+  .ad img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 576px) {
+    .ad {
+      display: block;
+    }
+  }
+</style>
 </head>
 <body>
-    <h1>Homework 2 Page</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum a, facilis doloribus maxime ratione at quae natus facere modi adipisci hic magnam suscipit odit asperiores cum, numquam molestias eos!</p>
-<h2>Food I like</h2>
-    <ul>
-    <li> Potatoes</li>
-    <li>Chocolate</li>
-    <li>Peas</li>
-    <li>Cheese
-        <ul>
-            <li>Brie</li>
-            <li>Latvian - test 222 the one..</li>
-        </ul>
-    </li>
-</ul>
-    <footer>Made while crying xxxx tests April (C) 2024</footer>
+
+<header>
+  <h1>Header</h1>
+</header>
+
+<nav>
+  <h2>Navigation</h2>
+</nav>
+
+<section>
+  <h2>Main Content</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum vehicula diam, a efficitur purus maximus eget.</p>
+  <img src="https://placekitten.com/300/200" alt="Cat Picture">
+</section>
+
+<aside>
+  <h2>Advertisement</h2>
+  <div class="ad">
+    <img src="https://via.placeholder.com/200x200" alt="Ad">
+  </div>
+</aside>
+
+<footer>
+  <h2>Footer</h2>
+</footer>
+
 </body>
 </html>
