@@ -75,7 +75,12 @@
     height: auto;
   }
 
-  .ad button {
+  .ad:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+  .follow-btn {
     position: absolute; /* Position the follow button */
     bottom: 10px; /* Adjust as needed */
     left: 50%; /* Center horizontally */
@@ -88,7 +93,7 @@
     transition: box-shadow 0.3s, transform 0.3s;
   }
 
-  .ad button:hover {
+  .follow-btn:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
   }
@@ -178,12 +183,10 @@
   
     <aside>
       <div class="ad">
-        <img src="ad-1.jpg" alt="Advertisement">
-        <button class="follow-btn">Follow</button>
-      </div>
-      <div class="ad">
-        <img src="ad-2.jpg" alt="Advertisement">
-        <button class="follow-btn">Follow</button>
+        <a href="https://www.instagram.com/loveyoustepan/" target="_blank">
+          <img src="stepan.PNG" alt="Advertisement">
+        </a>
+        <button class="follow-btn" onclick="window.open('https://www.instagram.com/loveyoustepan/', '_blank')">Follow</button>
       </div>
     </aside>
   
@@ -192,5 +195,5 @@
     </footer>
   </div>
   
-</body>
-</html>
+  </body>
+  </html>
