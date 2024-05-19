@@ -28,7 +28,7 @@
 
   nav a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     margin-right: 20px;
   }
   
@@ -67,6 +67,7 @@
 
   .ad {
     display: block;
+    position: relative; /* Ensure the follow button is positioned relative to its parent */
   }
 
   .ad img {
@@ -75,6 +76,24 @@
   }
 
   .ad:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+  .follow-btn {
+    position: absolute; /* Position the follow button */
+    bottom: 10px; /* Adjust as needed */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .follow-btn:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
   }
@@ -148,33 +167,36 @@
   <div class="main-content">
     <section>
       <h2>About</h2>
-      <p>Stepan (Ukrainian: Степан) is a Ukrainian striped cat who gained worldwide popularity on social media for his calm nature and jaded posture, making him Ukraine's most popular cat. He has more than one and a half million followers on Twitter and Instagram. Since 2019, Stepan also has an account on the TikTok network. By August 2023 Stepan had 1.3m followers on Instagram. In 2022 Stepan's Instagram page helped raise almost 15,000 euros in humanitarian aid for Ukraine.</p>
-      <img src="stepan-cover.jpg" alt="Cat Picture">
-    </section>
-
-    <section>
-      <h2>Biography</h2>
-      <p>Stepan was born in 2008 in Kharkiv. Stepan's owner, Anna, found him when he was little. He has since lived with her in a high-rise apartment building in Saltivka, Kharkiv. In 2020, during the quarantine period imposed following the COVID-19 pandemic, Anna recorded the first video of Stepan, and it received several million views. Since then, Anna has been posting new photos and taking pictures of Stepan almost every day, always coming up with new images for him. Initially Anna posted in Russian.</p>
-      <p>According to The Moscow Times' YouTube channel, by July 2021, Stepan's fame had crossed the country's borders, with Stepan "capturing the heart" of the Russian Internet.</p>
-      <p>In November 2021, Britney Spears drew attention to Stepan in her post. The publication had more than 1.1 million likes and almost nine thousand comments. Soon after, the Italian fashion house Valentino published an ad for one of its handbags, featuring the Stepan.</p>
-    </section>
-  </div>
-
-  <aside>
-    <h2>Follow Степан @loveyoustepan</h2>
-    <div class="ad">
-      <a href="https://loveyoustepan.store/en/" target="_blank">
-        <img src="stepan.PNG" alt="Ad">
-      </a>
-      <button class="follow-btn">Follow</button>
+      <p>Stepan (Ukrainian: Степан) is a Ukrainian striped cat who gained worldwide popularity on social media for his calm nature and jaded posture, making him Ukraine's most popular cat. He has more than one and a half million followers on Twitter and Instagram. Since 2019, Stepan also has an account on the
+        TikTok network. By August 2023, Stepan had 1.3 million followers on Instagram. In 2022, Stepan's Instagram page helped raise almost 15,000 euros in humanitarian aid for Ukraine.</p>
+        <img src="stepan-cover.jpg" alt="Cat Picture">
+      </section>
+  
+      <section>
+        <h2>Biography</h2>
+        <p>Stepan was born in 2008 in Kharkiv. Stepan's owner, Anna, found him when he was little. He has since lived with her in a high-rise apartment building in Saltivka, Kharkiv. In 2020, during the quarantine period imposed following the COVID-19 pandemic, Anna recorded the first video of Stepan, and it received several million views.</p>
+        <p>Since then, Anna has been posting new photos and taking pictures of Stepan almost every day, always coming up with new images for him. Initially, Anna posted in Russian.</p>
+        <p>According to The Moscow Times' YouTube channel, by July 2021, Stepan's fame had crossed the country's borders, with Stepan "capturing the heart" of the Russian Internet.</p>
+        <p>In November 2021, Britney Spears drew attention to Stepan in her post. The publication had more than 1.1 million likes and almost nine thousand comments. Soon after that, Stepan received offers to appear in commercials and participate in various events. For example, in 2022, Stepan appeared in a commercial for the Swedish company Casumo.</p>
+      </section>
     </div>
-  </aside>
   
-  <footer>
-    <h2>Footer</h2>
-    <p>Made with meowing</p>
-  </footer>
-</div>
+    <aside>
+      <div class="ad">
+        <img src="ad-1.jpg" alt="Advertisement">
+        <button class="follow-btn">Follow</button>
+      </div>
+      <div class="ad">
+        <img src="ad-2.jpg" alt="Advertisement">
+        <button class="follow-btn">Follow</button>
+      </div>
+    </aside>
   
-</body>
-</html>
+    <footer>
+      <p>&copy; 2024 Stepan the Cat. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  </body>
+  </html>
+  
