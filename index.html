@@ -107,6 +107,21 @@
     grid-gap: 20px;
     padding: 20px;
   }
+
+  /* Button hover effect */
+  .follow-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+
+  .follow-btn:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
 </style>
 </head>
 <body>
@@ -129,6 +144,7 @@
 
     <aside>
       <h2>Follow Степан @loveyoustepan</h2>
+      <button class="follow-btn">Follow</button>
       <div class="ad">
         <a href="https://www.instagram.com/loveyoustepan" target="_blank">
           <img src="stepan.PNG" alt="Ad">
@@ -144,8 +160,3 @@
 
   <footer>
     <h2>Footer</h2>
-  </footer>
-</div>
-
-</body>
-</html>
